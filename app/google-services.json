@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "741134395629",
+    "firebase_url": "https://bookeep-6c8b9.firebaseio.com",
+    "project_id": "bookeep-6c8b9",
+    "storage_bucket": "bookeep-6c8b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741134395629:android:a7d5f8660ef9fe94",
+        "android_client_info": {
+          "package_name": "io.talkor.bookeep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741134395629-2gpqic2e0c951hfkspihh1bb27lfm2gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.talkor.bookeep",
+            "certificate_hash": "08a6639856b94ad8a89e29556fa8bae18cc692d3"
+          }
+        },
+        {
+          "client_id": "741134395629-ocb782poc4qoapr1q8uvfnliju88ncqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0ID_QXPRWlrQ7LVWb4yigN9PIGk250vs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741134395629-7fgnvahrkp1ddtpfv8pf752qolemg9qi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "daniel.cohen.Bookeep"
+              }
+            },
+            {
+              "client_id": "741134395629-ocb782poc4qoapr1q8uvfnliju88ncqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

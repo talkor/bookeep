@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="io.talkor.bookeep.MainActivity">
+
+
+
+    <item
+        android:id="@+id/edit_book"
+        android:orderInCategory="100"
+        android:title="Edit"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/delete_book"
+        android:orderInCategory="100"
+        android:title="Delete"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item_share"
+        app:showAsAction="always"
+        android:title="Share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:actionProviderClass=
+            "android.widget.ShareActionProvider" />
+
+
+
+</menu>

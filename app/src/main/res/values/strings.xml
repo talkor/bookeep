@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Bookeep</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="genre_prompt">Genre...</string>
+
+    <string-array name="genre">
+        <item>Fiction</item>
+        <item>Non-Fiction</item>
+        <item>Children</item>
+        <item>Classic</item>
+        <item>Science Fiction</item>
+        <item>Mystery</item>
+        <item>Horror</item>
+        <item>Romance</item>
+    </string-array>
+
+</resources>

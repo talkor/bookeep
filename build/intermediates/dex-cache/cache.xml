@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/3d128419855489d0890ec7ffc573049b0f69f9c5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_b5bbe1451251d193346145df1e48dcc383cbe110.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/743c4afe488189aef9de021c71dda644bb2341df/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_5e0e162979eacc31fdaf58394fc1a0282f4d431b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/76e7e049f146ad43fea626d4bcf0c3a8e3c6b55d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_c86e265c14487c8b584765b16e23ccd6b1ff180e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/2618715e52cf82b5a3abd5e65d84f15682f725cd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_a470e94ce88126f8e492aa5950a933c8bd86a0ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/0b5b6c7a2b156a311d71478ceda467178001ac43/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_efad3aaf3e4217fca4ee5fe8de740daddc685003.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/2b45ee01359eeeb10bed2af490ac3b15b5f1a399/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_dfa87fa13cd9a4eaf71896487aa7eb9499c5607e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/5ae9426d4a0358bc9edfbb09de0b17ba4c106ec6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_4fb72822d2aaf087e8093603d5c3bb7d759de836.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Tal/.android/build-cache/1f8bf1633f877a150afe581968506f9862ede50d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="/Users/Tal/Desktop/Bookeep/app/build/intermediates/pre-dexed/debug/classes_fe54fa2c741bc47068c4cbc4969f9a01bbe74ac4.jar" />
+    </item>
+
+</items>
