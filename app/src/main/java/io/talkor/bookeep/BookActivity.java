@@ -1,6 +1,7 @@
 package io.talkor.bookeep;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,8 +37,7 @@ public class BookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
 
-        String s = getIntent().getStringExtra("EXTRA_BOOK_ID");
-        bookNumber = s.toString();
+        bookNumber = getIntent().getStringExtra("EXTRA_BOOK_ID");
 
         progressBar = (SeekBar)findViewById(R.id.seekBar);
         bookNameTextView = (TextView) findViewById(R.id.bookName);
@@ -49,18 +49,21 @@ public class BookActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mDatabase.child("user_01").child("books").child("book_" + bookNumber).addValueEventListener(new ValueEventListener() {
+        mDatabase.child("user_01").child("books").child("book_000" + bookNumber).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 book = dataSnapshot.getValue(Book.class);
-                bookNameTextView.setText(book.getBookName());
-                bookAuthorTextView.setText(book.getBookAuthor());
-                pageNumbersTextView.setText("Page " + book.getBookProgress() + " of " + book.getBookPages());
 
-                // Progress bar update
-                progressBar.setMax(Integer.parseInt(book.getBookPages()));
-                progressBar.setProgress(Integer.parseInt(book.getBookProgress()));
+                if (book != null) {
+                    bookNameTextView.setText(book.getBookName());
+                    bookAuthorTextView.setText(book.getBookAuthor());
+                    pageNumbersTextView.setText("Page " + book.getBookProgress() + " of " + book.getBookPages());
+
+                    // Progress bar update
+                    progressBar.setMax(Integer.parseInt(book.getBookPages()));
+                    progressBar.setProgress(Integer.parseInt(book.getBookProgress()));
+                }
             }
 
             @Override
@@ -76,7 +79,7 @@ public class BookActivity extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("user_01").child("books").child("book_" + bookNumber).child("bookProgress").setValue("" + tempProgress);
+                mDatabase.child("user_01").child("books").child("book_000" + bookNumber).child("bookProgress").setValue("" + tempProgress);
 
                 Toast.makeText(BookActivity.this,"Updated",Toast.LENGTH_LONG).show();
                 finish();
@@ -142,8 +145,16 @@ public class BookActivity extends AppCompatActivity {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+                        // destroy views
+                        progressBar.setProgress(0);
+                        bookNameTextView.setText(null);
+                        bookAuthorTextView.setText(null);
+                        pageNumbersTextView.setText(null);
+
+                        mDatabase.child("user_01").child("books").child("book_000" + bookNumber).getRef().setValue(null);
+
                         finish();
-                     //   mDatabase.child("books").child("book_" + bookNumber).removeValue();
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -12,6 +12,12 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/archive_book"
+        android:orderInCategory="100"
+        android:title="Archive"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/delete_book"
         android:orderInCategory="100"
         android:title="Delete"

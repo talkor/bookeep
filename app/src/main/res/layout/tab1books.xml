@@ -19,6 +19,15 @@
             android:drawSelectorOnTop="true"
             android:layout_alignParentBottom="true"/>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="200dp"
+            android:visibility="visible"/>
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

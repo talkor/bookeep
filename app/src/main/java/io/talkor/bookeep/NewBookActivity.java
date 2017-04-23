@@ -1,9 +1,7 @@
 package io.talkor.bookeep;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -16,10 +14,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import static android.R.attr.id;
-import static android.R.attr.name;
-
 
 public class NewBookActivity extends AppCompatActivity {
 
@@ -91,8 +85,7 @@ public class NewBookActivity extends AppCompatActivity {
                     bookPagesField.setError( "Number of pages is required!");
                 } else {
                     Book book = new Book(bookID, bookName,bookAuthor,bookPages, bookGenre, bookProgress);
-                    mDatabase.child("user_01").child("books").child("book_" + idCounter).setValue(book);
-                  //  mDatabase.child("user_01").child("books").push().setValue(book);
+                    mDatabase.child("user_01").child("books").child("book_000" + idCounter).setValue(book);
                     mDatabase.child("user_01").child("idCounter").setValue(++idCounter);
 
                     Toast.makeText(NewBookActivity.this,"Book added successfully",Toast.LENGTH_LONG).show();
