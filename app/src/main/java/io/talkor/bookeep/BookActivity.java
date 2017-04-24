@@ -49,7 +49,7 @@ public class BookActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        mDatabase.child("user_01").child("books").child("book_000" + bookNumber).addValueEventListener(new ValueEventListener() {
+        mDatabase.child("user_01").child("books").child("book_" + String.format("%03d", Integer.parseInt(bookNumber))).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -79,7 +79,7 @@ public class BookActivity extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabase.child("user_01").child("books").child("book_000" + bookNumber).child("bookProgress").setValue("" + tempProgress);
+                mDatabase.child("user_01").child("books").child("book_" + String.format("%03d", Integer.parseInt(bookNumber))).child("bookProgress").setValue("" + tempProgress);
 
                 Toast.makeText(BookActivity.this,"Updated",Toast.LENGTH_LONG).show();
                 finish();
@@ -152,7 +152,7 @@ public class BookActivity extends AppCompatActivity {
                         bookAuthorTextView.setText(null);
                         pageNumbersTextView.setText(null);
 
-                        mDatabase.child("user_01").child("books").child("book_000" + bookNumber).getRef().setValue(null);
+                        mDatabase.child("user_01").child("books").child("book_" + String.format("%03d", Integer.parseInt(bookNumber))).getRef().setValue(null);
 
                         finish();
                     }

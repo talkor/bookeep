@@ -15,6 +15,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import static android.R.attr.version;
+
 public class NewBookActivity extends AppCompatActivity {
 
 
@@ -28,7 +30,7 @@ public class NewBookActivity extends AppCompatActivity {
     private EditText bookYearField;
     private EditText bookPagesField;
 
-    private Long idCounter;
+    private String idCounter;
 
 
     @Override
@@ -52,7 +54,7 @@ public class NewBookActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                Long value = dataSnapshot.getValue(Long.class);
+                String value = dataSnapshot.getValue(String.class);
                 idCounter = value;
              }
 
@@ -74,7 +76,7 @@ public class NewBookActivity extends AppCompatActivity {
                // String bookYear = bookYearField.getText().toString().trim();
                 String bookPages = bookPagesField.getText().toString().trim();
                 String bookProgress = "0";
-                String bookID = idCounter.toString();
+                String bookID = idCounter;
 
 
                 if (bookNameField.getText().toString().trim().equals("")) {
@@ -85,8 +87,9 @@ public class NewBookActivity extends AppCompatActivity {
                     bookPagesField.setError( "Number of pages is required!");
                 } else {
                     Book book = new Book(bookID, bookName,bookAuthor,bookPages, bookGenre, bookProgress);
-                    mDatabase.child("user_01").child("books").child("book_000" + idCounter).setValue(book);
-                    mDatabase.child("user_01").child("idCounter").setValue(++idCounter);
+                    mDatabase.child("user_01").child("books").child("book_" + String.format("%03d", Integer.parseInt(idCounter))).setValue(book);
+                    idCounter = "" + (Integer.parseInt(idCounter) + 1);
+                    mDatabase.child("user_01").child("idCounter").setValue(idCounter);
 
                     Toast.makeText(NewBookActivity.this,"Book added successfully",Toast.LENGTH_LONG).show();
                     finish();
