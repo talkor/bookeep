@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,12 +22,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import static io.talkor.bookeep.R.id.book_list;
+import static io.talkor.bookeep.R.id.section_label1;
 
 
 public class Tab1Books extends Fragment {
 
     private DatabaseReference mDatabase;
     ListView listView;
+    TextView noBooksTextView;
     ArrayList<Book> books = new ArrayList<Book>();
     BookAdapter adapter;
     ProgressBar progressBar;
@@ -38,10 +41,12 @@ public class Tab1Books extends Fragment {
         View rootView = inflater.inflate(R.layout.tab1books, container, false);
 
         listView = (ListView) rootView.findViewById(book_list);
+        noBooksTextView = (TextView) rootView.findViewById(section_label1);
         progressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
 
         adapter = new BookAdapter(getActivity(), books);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
         listView.setAdapter(adapter);
 
@@ -57,6 +62,13 @@ public class Tab1Books extends Fragment {
                 }
 
                 progressBar.setVisibility(View.GONE);
+
+                // disappear if there are books
+                if (listView.getAdapter().getCount() == 0 && progressBar.getVisibility() == View.GONE)
+                    noBooksTextView.setVisibility(View.VISIBLE);
+                else
+                    noBooksTextView.setVisibility(View.GONE);
+
 
                 adapter.notifyDataSetChanged();
             }

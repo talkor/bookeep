@@ -63,6 +63,10 @@ public class BookActivity extends AppCompatActivity {
                     // Progress bar update
                     progressBar.setMax(Integer.parseInt(book.getBookPages()));
                     progressBar.setProgress(Integer.parseInt(book.getBookProgress()));
+
+
+                    //title
+                    setTitle(book.getBookName());
                 }
             }
 
