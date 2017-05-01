@@ -45,7 +45,7 @@ public class Tab1Books extends Fragment {
         adapter = new BookAdapter(getActivity(), books);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-
+        noBooksTextView.setVisibility(View.GONE);
         listView.setAdapter(adapter);
 
         mDatabase.child("user_01").child("books").addValueEventListener(new ValueEventListener() {
@@ -80,17 +80,18 @@ public class Tab1Books extends Fragment {
 
 
         listView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener(){
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            new AdapterView.OnItemClickListener(){
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Intent intent = new Intent(getActivity(),BookActivity.class);
-                        String chosenBook = adapter.getItem(position).getBookID();
-                        intent.putExtra("EXTRA_BOOK_ID", "" + chosenBook); //send chosen book
-                        startActivity(intent);
-                    }
+                    Intent intent = new Intent(getActivity(),BookActivity.class);
+                    String chosenBook = adapter.getItem(position).getBookID();
+                    intent.putExtra("EXTRA_BOOK_ID", "" + chosenBook); //send chosen book
+                    startActivity(intent);
                 }
+            }
         );
+
 
         return rootView;
     }

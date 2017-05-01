@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.talkor.bookeep.BookActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/bookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/bookPicture"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Alice in Wonderland"
+            android:textSize="35dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:id="@+id/bookPicture"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/bookcover" />
+
+            <LinearLayout
+                android:layout_width="344dp"
+                android:layout_height="495dp"
+                android:layout_margin="15dp"
+                android:layout_toRightOf="@id/bookPicture"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+
+                <TextView
+                    android:id="@+id/bookAuthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/bookPicture"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:text="Lewis Carroll"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/bookGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:text="Chldren's Fiction"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/bookYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:text="Publish Year"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/book_num_pages"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="25dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Page 0 of 0"
+            android:textSize="20sp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <NumberPicker
+                android:theme="@style/AppTheme.Picker"
+                android:id="@+id/numberPicker"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Update Progress" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

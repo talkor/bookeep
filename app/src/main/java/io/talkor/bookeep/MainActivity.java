@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     Tab2Friends tab2 = new Tab2Friends();
                     return tab2;
-                case 2:
-                    Tab3Reviews tab3 = new Tab3Reviews();
-                    return tab3;
+             //   case 2:
+               //     Tab3Reviews tab3 = new Tab3Reviews();
+                 //   return tab3;
                 default:
                     return null;
             }
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -149,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Books";
                 case 1:
                     return "Friends";
-                case 2:
-                    return "Reviews";
+            //    case 2:
+              //      return "Reviews";
             }
             return null;
         }
