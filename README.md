@@ -7,14 +7,14 @@ The app uses Firebase for real-time database and user authentication (in develop
 
 # Screenshots
 
-![Screenshot](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg)
+<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg" width="300" />
 ---
 
-![Screenshot](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen4.jpg)
+<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen4.jpg" width="300" />
 ---
 
-![Screenshot](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen1.jpg)
+<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen1.jpg" width="300" />
 ---
 
-![Screenshot](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen2.jpg)
+<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen2.jpg" width="300" />
 ---
