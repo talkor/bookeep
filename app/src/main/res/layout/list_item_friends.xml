@@ -8,7 +8,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:src="@drawable/ic_person_black_24dp"
+        android:src="@drawable/ic_account_circle"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/pic_image_view" />
@@ -27,7 +27,6 @@
             android:paddingLeft="10dp"
             android:paddingTop="0dp"
             tools:text="Name"/>
-
 
         <TextView
             android:id="@+id/user_streak_view"

@@ -94,7 +94,6 @@ public class Tab2Friends extends Fragment {
                 }
         );
 
-
         return rootView;
     }
 }
