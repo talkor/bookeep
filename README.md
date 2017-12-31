@@ -11,17 +11,9 @@ During the contest a mockup has been created. Several features were added later.
 
 ## Screenshots
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg)  |  ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg)
-
-<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg" width="300">
-
-<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen4.jpg" width="300">
-
-<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen1.jpg" width="300">
-
-<img src="https://github.com/talkor/bookeep-android/blob/master/screenshots/screen2.jpg" width="300">
+| Solarized dark     |  Solarized dark    |  Solarized dark     |   Solarized dark   |         
+|--------------------|--------------------|---------------------|--------------------|
+| ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg)  |  ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen4.jpg) |  ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen1.jpg)  |   ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen2.jpg)
 
 ## Reflection
 
