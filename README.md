@@ -11,7 +11,7 @@ During the contest a mockup has been created. Several features were added later.
 
 ## Screenshots
 
-| Solarized dark     |  Solarized dark    |  Solarized dark     |   Solarized dark   |         
+| Books Screen     |  Book Screen    |  Friends Screen     |   Edit Book Screen   |         
 |--------------------|--------------------|---------------------|--------------------|
 | ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen3.jpg)  |  ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen4.jpg) |  ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen1.jpg)  |   ![](https://github.com/talkor/bookeep-android/blob/master/screenshots/screen2.jpg)
 
